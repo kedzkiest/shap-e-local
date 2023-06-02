@@ -55,7 +55,7 @@ Result of tensor operation: tensor([ 8., 15.], device='cuda:0')
 ```
 python pytorch3dPrep.py
 ```
-This program output a string ("py310_cu117_pyt201", for example)
+This program output a string ("py310_cu117_pyt201", for example)  
 Remember this string.
 #### 7. Install pytorch3d library
 ```
@@ -77,7 +77,7 @@ pip install vedo
 pip install open3d
 ```
 Then, use the commands below to inspect generated files.  
-(command line argument "filename" is the name of a file except file extension part. 
+(command line argument "filename" is the name of a file except file extension part.  
 e.g. you type "python displayPly.py example_mesh_0" to inspect "example_mesh_0.ply" file.)
 ```
 python displayObj.py {filename}
