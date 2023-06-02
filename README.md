@@ -21,7 +21,7 @@ OS: Ubuntu 20.04.5 LTS
 CPU: Intel(R) Core(TM) i7-6800K CPU @ 3.40GHz  
 GPU: NVIDIA GeForce RTX 3090  
 Cuda version: 12.1  
-pip version:23.1.2  
+pip version: 23.1.2  
 conda version: 23.5.0  
 
 ## Procedure
