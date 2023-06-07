@@ -4,6 +4,8 @@ from shap_e.diffusion.sample import sample_latents
 from shap_e.diffusion.gaussian_diffusion import diffusion_from_config
 from shap_e.models.download import load_model, load_config
 
+import os
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 xm = load_model('transmitter', device=device)
 model = load_model('text300M', device=device)
@@ -31,11 +33,13 @@ latents = sample_latents(
 # Example of saving the latents as meshes.
 from shap_e.util.notebooks import decode_latent_mesh
 
+os.makedirs('./output', exist_ok = False)
+
 for i, latent in enumerate(latents):
     t = decode_latent_mesh(xm, latent).tri_mesh()
-    with open(f'example_mesh_{i}.ply', 'wb') as f:
+    with open(f'./output/mesh_{i}.ply', 'wb') as f:
         t.write_ply(f)
-    with open(f'example_mesh_{i}.obj', 'w') as f:
+    with open(f'./output/mesh_{i}.obj', 'w') as f:
         t.write_obj(f)
 
 
