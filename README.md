@@ -77,11 +77,9 @@ pip install vedo
 pip install open3d
 ```
 Then, use the commands below to inspect generated files.  
-(command line argument "filename" is the name of a file except file extension part.  
-e.g. you type "python displayPly.py example_mesh_0" to inspect "example_mesh_0.ply" file.)
+(command line argument "filepath" is the path of a file except file extension part.  
+e.g. you type "python displayPly.py output/mesh_0" to inspect "output/mesh_0.ply" file.)
 ```
-python displayObj.py {filename}
-python displayPly.py {filename}
+python displayObj.py {filepath}
+python displayPly.py {filepath}
 ```
-
-Please make sure that displayObj.py or displayPly.py files and .obj or .ply files are in the same directory.
