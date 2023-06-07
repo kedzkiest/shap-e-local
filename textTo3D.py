@@ -33,7 +33,7 @@ latents = sample_latents(
 # Example of saving the latents as meshes.
 from shap_e.util.notebooks import decode_latent_mesh
 
-os.makedirs('./output', exist_ok = False)
+os.makedirs('./output', exist_ok = True)
 
 for i, latent in enumerate(latents):
     t = decode_latent_mesh(xm, latent).tri_mesh()
